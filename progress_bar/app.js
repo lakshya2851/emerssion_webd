@@ -14,6 +14,6 @@ addBtn.addEventListener('click', () => {
 
   // Trigger animation on next frame
   requestAnimationFrame(() => {
-    fill.style.width = '100%';
+    fill.style.width = '10%';
   });
 });

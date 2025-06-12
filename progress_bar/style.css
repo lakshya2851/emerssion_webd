@@ -35,5 +35,5 @@ body {
   width: 0%;
   background-color: #4caf50;
   border-radius: 12px;
-  transition: width 2000ms linear;
+  transition: width 2000ms ease;
 }

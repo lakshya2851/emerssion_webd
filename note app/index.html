@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Note App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Note App</h1>
+    <p>Double click on a note to remove it</p>
+    <div class="notes-container" id="notesContainer">
+      <div class="note add" onclick="addNote()">+</div>
+    </div>
+  </div>
+  <script >
+    function addNote() {
+      const note = document.createElement('div');
+      note.className = 'note';
+      note.contentEditable = true;
+      note.innerText = 'New Note';
+      note.ondblclick = () => note.remove();
+      const container = document.getElementById('notesContainer');
+      container.insertBefore(note, container.querySelector('.add'));
+    }
+  </script>
+</body>
+</html>
