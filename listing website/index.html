@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Product Listing</h1>
+
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+    <button onclick="searchProducts()">Search</button>
+
+    <div class="sort-options">
+      <select id="sortBy" onchange="sortProducts()">
+        <option value="">Sort By</option>
+        <option value="price">Price</option>
+        <option value="rating">Rating</option>
+      </select>
+    </div>
+
+    <div id="productList" class="products"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
