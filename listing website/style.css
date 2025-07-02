@@ -1,38 +1,110 @@
+/* Reset & Base */
 body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fa;
+  margin: 0;
   padding: 20px;
+  color: #333;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-input, select, button {
-  padding: 10px;
-  margin: 10px 0;
-  width: 100%;
-  box-sizing: border-box;
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
 }
 
+/* Controls */
+input[type="text"],
+input[type="number"],
+select,
+button {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  background: #f9f9f9;
+  transition: border 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #2980b9;
+}
+
+button {
+  background-color: #2980b9;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #1c6691;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.price-range {
+  display: flex;
+  gap: 10px;
+}
+
+/* Product Grid */
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
 }
 
 .product {
-  border: 1px solid #ddd;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   padding: 15px;
-  border-radius: 8px;
-  background: #f9f9f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .product img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  color: #34495e;
+}
+
+.product p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
 }
